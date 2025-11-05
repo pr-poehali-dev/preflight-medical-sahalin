@@ -53,7 +53,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in">
                 <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                  Предрейсовые медосмотры в Сахалинской области
+                  Предрейсовые и послерейсовые медосмотры в Сахалинской области
                 </h1>
                 <p className="text-xl text-gray-600">
                   Профессиональные медицинские осмотры водителей и сотрудников. 
