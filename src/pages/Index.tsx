@@ -22,7 +22,7 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/931fd315-6af0-427d-8bce-5c9dd31415f0.png" 
               alt="Интермед-групп" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
             <div className="hidden md:flex items-center gap-6">
               {[
