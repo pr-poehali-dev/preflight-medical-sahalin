@@ -20,7 +20,7 @@ const Index = () => {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Icon name="Activity" className="text-primary" size={32} />
+              <img src="https://cdn.poehali.dev/files/ddd75be6-1fdc-4a31-8a24-88c0d3f5adf2.png" alt="Интермед-групп" className="h-10 w-10" />
               <span className="text-2xl font-bold text-primary">Интермед-групп</span>
             </div>
             <div className="hidden md:flex items-center gap-6">
@@ -349,7 +349,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Icon name="Activity" className="text-primary" size={28} />
+                <img src="https://cdn.poehali.dev/files/ddd75be6-1fdc-4a31-8a24-88c0d3f5adf2.png" alt="Интермед-групп" className="h-8 w-8" />
                 <span className="text-xl font-bold">Интермед-групп</span>
               </div>
               <p className="text-gray-400">
