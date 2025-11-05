@@ -38,7 +38,15 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <Button className="hidden md:flex">Записаться</Button>
+            <div className="hidden md:flex items-center gap-4">
+              <a href="tel:+74242123456" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
+                +7 (4242) 12-34-56
+              </a>
+              <span className="text-gray-400">|</span>
+              <a href="tel:+79147654321" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
+                +7 (914) 765-43-21
+              </a>
+            </div>
           </div>
         </nav>
       </header>
@@ -55,9 +63,16 @@ const Index = () => {
                   Медицинские осмотры водителей. Быстро, качественно, с соблюдением всех стандартов.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="text-lg px-8" onClick={() => scrollToSection('contacts')}>
-                    Записаться на осмотр
-                  </Button>
+                  <div className="flex flex-col gap-2">
+                    <Button size="lg" className="text-lg px-8" asChild>
+                      <a href="tel:+74242123456">Позвонить нам</a>
+                    </Button>
+                    <div className="flex gap-3 text-sm text-gray-600 justify-center">
+                      <a href="tel:+74242123456" className="hover:text-primary transition-colors">+7 (4242) 12-34-56</a>
+                      <span>•</span>
+                      <a href="tel:+79147654321" className="hover:text-primary transition-colors">+7 (914) 765-43-21</a>
+                    </div>
+                  </div>
                   <Button size="lg" variant="outline" className="text-lg px-8" onClick={() => scrollToSection('services')}>
                     Наши услуги
                   </Button>
