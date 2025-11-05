@@ -19,11 +19,6 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between w-full">
-            <img 
-              src="https://cdn.poehali.dev/files/931fd315-6af0-427d-8bce-5c9dd31415f0.png" 
-              alt="Интермед-групп" 
-              className="h-20 w-auto"
-            />
             <div className="hidden md:flex items-center gap-6">
               {[
                 { id: 'home', label: 'Главная' },
