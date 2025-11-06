@@ -22,7 +22,7 @@ const Index = () => {
         <nav className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-2">
-              <img src="https://cdn.poehali.dev/projects/2b4f44ee-003c-4f33-8cd3-e727870eeed3/files/70fc69be-5219-4aa8-b488-3fef4a7dff1d.jpg" alt="Логотип" className="h-10 md:h-12 w-auto object-contain" />
+              <img src="https://cdn.poehali.dev/files/c32dbaeb-5bbc-4c3c-ad8c-d078126bc2e8.png" alt="Логотип" className="h-12 md:h-14 w-auto object-contain" />
             </div>
             <button
               className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
