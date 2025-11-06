@@ -288,7 +288,8 @@ const Index = () => {
                 {
                   icon: 'FileCheck',
                   title: 'Лицензия на медицинскую деятельность',
-                  number: '№ ЛО-65-01-002345',
+                  number: '№ Л041-01185-65/03090893',
+                  link: 'https://roszdravnadzor.gov.ru/services/licenses?downloadlic=911144&pdf=1',
                 },
                 {
                   icon: 'ShieldCheck',
@@ -301,7 +302,11 @@ const Index = () => {
                   number: '№ 2023-АК-012456',
                 },
               ].map((license, index) => (
-                <Card key={index} className="text-center border-2 hover:border-primary transition-all">
+                <Card 
+                  key={index} 
+                  className={`text-center border-2 hover:border-primary transition-all ${license.link ? 'cursor-pointer' : ''}`}
+                  onClick={() => license.link && window.open(license.link, '_blank')}
+                >
                   <CardHeader>
                     <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Icon name={license.icon} className="text-primary" size={40} />
