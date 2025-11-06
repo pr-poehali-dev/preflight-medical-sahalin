@@ -304,10 +304,15 @@ const Index = () => {
               ].map((license, index) => (
                 <Card 
                   key={index} 
-                  className={`text-center border-2 hover:border-primary transition-all ${license.link ? 'cursor-pointer' : ''}`}
+                  className={`text-center border-2 hover:border-primary transition-all relative ${license.link ? 'cursor-pointer hover:shadow-lg' : ''}`}
                   onClick={() => license.link && window.open(license.link, '_blank')}
                 >
                   <CardHeader>
+                    {license.link && (
+                      <div className="absolute top-3 right-3">
+                        <Icon name="ExternalLink" className="text-primary" size={20} />
+                      </div>
+                    )}
                     <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Icon name={license.icon} className="text-primary" size={40} />
                     </div>
