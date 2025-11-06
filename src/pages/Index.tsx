@@ -413,7 +413,7 @@ const Index = () => {
 
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl">
             <div>
               <h3 className="text-xl font-bold mb-4">Интермед-групп</h3>
               <p className="text-gray-400">
@@ -426,6 +426,11 @@ const Index = () => {
                 <p>+7 914 767-51-12</p>
                 <p>+7 914 744-95-68</p>
                 <p>intermed.ltd@bk.ru</p>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Адрес</h3>
+              <div className="text-gray-400">
                 <p>Сахалинская область, г. Южно-Сахалинск, Ул. Чехова, 43, 2 этаж, кабинет 3</p>
               </div>
             </div>
