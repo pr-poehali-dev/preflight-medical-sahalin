@@ -7,9 +7,11 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
+    setIsMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -17,8 +19,24 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <nav className="container mx-auto px-4 py-5">
+        <nav className="container mx-auto px-4 py-4 md:py-5">
           <div className="flex items-center justify-between w-full">
+            <button
+              className="md:hidden p-2 text-gray-600 hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+            </button>
+            
+            <div className="md:hidden flex items-center gap-2">
+              <a href="tel:+79147675112" className="p-2 text-gray-900 hover:text-primary transition-colors">
+                <Icon name="Phone" size={20} />
+              </a>
+              <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="p-2 text-green-600 hover:text-green-700 transition-colors">
+                <Icon name="MessageCircle" size={20} />
+              </a>
+            </div>
+
             <div className="hidden md:flex items-center gap-8">
               {[
                 { id: 'home', label: 'Главная' },
@@ -58,6 +76,38 @@ const Index = () => {
               </div>
             </div>
           </div>
+          
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-3 border-t pt-4">
+              {[
+                { id: 'home', label: 'Главная' },
+                { id: 'services', label: 'Услуги' },
+                { id: 'about', label: 'О компании' },
+                { id: 'licenses', label: 'Лицензии' },
+                { id: 'contacts', label: 'Контакты' },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`block w-full text-left px-4 py-2 text-base font-medium transition-colors hover:bg-gray-50 rounded ${
+                    activeSection === item.id ? 'text-primary bg-blue-50' : 'text-gray-600'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+              <div className="px-4 pt-2 space-y-2 border-t mt-4">
+                <a href="tel:+79147675112" className="flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-primary">
+                  <Icon name="Phone" size={16} />
+                  +7 914 767-51-12
+                </a>
+                <a href="tel:+79147449568" className="flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-primary">
+                  <Icon name="Phone" size={16} />
+                  +7 914 744-95-68
+                </a>
+              </div>
+            </div>
+          )}
         </nav>
       </header>
 
@@ -66,17 +116,17 @@ const Index = () => {
           <div className="container mx-auto px-4 py-20">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in">
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Предрейсовые и послерейсовые медосмотры в Сахалинской области
                 </h1>
-                <p className="text-xl text-gray-600">
+                <p className="text-lg md:text-xl text-gray-600">
                   Медицинские осмотры водителей. Быстро, качественно, с соблюдением всех стандартов.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="text-lg px-8" asChild>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" asChild>
                     <a href="tel:+79147675112">Позвонить нам</a>
                   </Button>
-                  <Button size="lg" variant="outline" className="text-lg px-8" onClick={() => scrollToSection('services')}>
+                  <Button size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto" onClick={() => scrollToSection('services')}>
                     Наши услуги
                   </Button>
                 </div>
