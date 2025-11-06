@@ -440,8 +440,8 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Контакты</h3>
               <div className="space-y-2 text-gray-400">
-                <p>+7 (4242) 12-34-56</p>
-                <p>info@intermed-group.ru</p>
+                <p>+7 914 767-51-12</p>
+                <p>intermed.ltd@bk.ru</p>
                 <p>г. Южно-Сахалинск</p>
               </div>
             </div>
