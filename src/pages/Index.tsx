@@ -17,9 +17,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <nav className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between w-full">
-            <div className="hidden md:flex items-center gap-6">
+        <nav className="container mx-auto px-4 py-5">
+          <div className="flex items-center justify-center w-full">
+            <div className="hidden md:flex items-center gap-8">
               {[
                 { id: 'home', label: 'Главная' },
                 { id: 'services', label: 'Услуги' },
@@ -30,22 +30,13 @@ const Index = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                  className={`text-base font-medium transition-colors hover:text-primary ${
                     activeSection === item.id ? 'text-primary' : 'text-gray-600'
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
-            </div>
-            <div className="hidden md:flex items-center gap-4">
-              <a href="tel:+79147675112" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
-                +7 914 767-51-12
-              </a>
-              <span className="text-gray-400">|</span>
-              <a href="tel:+79147449568" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
-                +7 914 744-95-68
-              </a>
             </div>
           </div>
         </nav>
