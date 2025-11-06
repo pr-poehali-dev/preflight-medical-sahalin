@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -8,6 +8,15 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -18,7 +27,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary/85 to-secondary/85 backdrop-blur-md border-b border-blue-400/20">
+      <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-blue-400/20 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-gradient-to-r from-primary/60 to-secondary/60' 
+          : 'bg-gradient-to-r from-primary/85 to-secondary/85'
+      }`}>
         <nav className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between w-full">
             <button 
