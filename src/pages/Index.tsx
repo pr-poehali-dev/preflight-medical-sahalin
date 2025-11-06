@@ -350,6 +350,30 @@ const Index = () => {
                 </CardContent>
               </Card>
             </div>
+            
+            <div className="mt-12">
+              <Card className="overflow-hidden">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <Icon name="MapPin" className="text-primary" size={24} />
+                    Наше расположение
+                  </CardTitle>
+                  <CardDescription>Ул. Чехова, 43, 2 этаж, кабинет 3</CardDescription>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div className="w-full h-[400px]">
+                    <iframe
+                      src="https://yandex.ru/map-widget/v1/?ll=142.738126%2C46.961538&z=17&l=map&pt=142.738126,46.961538,pm2rdm"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      allowFullScreen
+                      style={{ position: 'relative' }}
+                    ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
       </main>
