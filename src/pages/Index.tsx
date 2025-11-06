@@ -39,12 +39,12 @@ const Index = () => {
               ))}
             </div>
             <div className="hidden md:flex items-center gap-4">
-              <a href="tel:+74242123456" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
-                +7 (4242) 12-34-56
+              <a href="tel:+79147675112" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
+                +7 914 767-51-12
               </a>
               <span className="text-gray-400">|</span>
-              <a href="tel:+79147654321" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
-                +7 (914) 765-43-21
+              <a href="tel:+79147449568" className="text-sm font-medium text-gray-900 hover:text-primary transition-colors">
+                +7 914 744-95-68
               </a>
             </div>
           </div>
@@ -65,12 +65,12 @@ const Index = () => {
                 <div className="flex flex-wrap gap-4">
                   <div className="flex flex-col gap-2">
                     <Button size="lg" className="text-lg px-8" asChild>
-                      <a href="tel:+74242123456">Позвонить нам</a>
+                      <a href="tel:+79147675112">Позвонить нам</a>
                     </Button>
                     <div className="flex gap-3 text-sm text-gray-600 justify-center">
-                      <a href="tel:+74242123456" className="hover:text-primary transition-colors">+7 (4242) 12-34-56</a>
+                      <a href="tel:+79147675112" className="hover:text-primary transition-colors">+7 914 767-51-12</a>
                       <span>•</span>
-                      <a href="tel:+79147654321" className="hover:text-primary transition-colors">+7 (914) 765-43-21</a>
+                      <a href="tel:+79147449568" className="hover:text-primary transition-colors">+7 914 744-95-68</a>
                     </div>
                   </div>
                   <Button size="lg" variant="outline" className="text-lg px-8" onClick={() => scrollToSection('services')}>
@@ -206,8 +206,8 @@ const Index = () => {
                 <Card className="bg-white">
                   <CardHeader>
                     <Icon name="Clock" className="text-primary mb-2" size={40} />
-                    <CardTitle className="text-3xl">24/7</CardTitle>
-                    <CardDescription>Режим работы</CardDescription>
+                    <CardTitle className="text-3xl">Пн-Вс</CardTitle>
+                    <CardDescription>05:00–19:00</CardDescription>
                   </CardHeader>
                 </Card>
                 <Card className="bg-white">
@@ -279,7 +279,7 @@ const Index = () => {
                     <CardDescription className="text-base text-gray-700">
                       Сахалинская область, г. Южно-Сахалинск,
                       <br />
-                      ул. Ленина, д. 123, офис 45
+                      Ул. Чехова, 43, 2 этаж, кабинет 3
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -290,9 +290,9 @@ const Index = () => {
                       Телефон
                     </CardTitle>
                     <CardDescription className="text-base text-gray-700">
-                      +7 (4242) 12-34-56
+                      +7 914 767-51-12
                       <br />
-                      +7 (914) 765-43-21
+                      +7 914 744-95-68
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -303,9 +303,7 @@ const Index = () => {
                       Email
                     </CardTitle>
                     <CardDescription className="text-base text-gray-700">
-                      info@intermed-group.ru
-                      <br />
-                      order@intermed-group.ru
+                      intermed.ltd@bk.ru
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -316,9 +314,11 @@ const Index = () => {
                       Режим работы
                     </CardTitle>
                     <CardDescription className="text-base text-gray-700">
-                      Круглосуточно, без выходных
+                      Пн — Пт: 05:00–19:00
                       <br />
-                      24/7
+                      Сб — Вс: 06:00–18:00
+                      <br />
+                      Перерыв: 12:00–15:00
                     </CardDescription>
                   </CardHeader>
                 </Card>
