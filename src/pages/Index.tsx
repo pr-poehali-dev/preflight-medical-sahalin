@@ -363,7 +363,7 @@ const Index = () => {
                 <CardContent className="p-0">
                   <div className="w-full h-[400px]">
                     <iframe
-                      src="https://yandex.ru/map-widget/v1/?ll=142.7406%2C46.9595&z=17&l=map&pt=142.7406,46.9595,pm2rdm"
+                      src="https://yandex.ru/map-widget/v1/?text=Южно-Сахалинск%2C%20улица%20Чехова%2C%2043&sll=142.738126%2C46.961538&z=16&l=map"
                       width="100%"
                       height="100%"
                       frameBorder="0"
