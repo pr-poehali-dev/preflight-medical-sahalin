@@ -18,21 +18,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <nav className="container mx-auto px-4 py-4 md:py-5">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary to-secondary backdrop-blur-sm border-b border-blue-400/20">
+        <nav className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between w-full">
+            <div className="flex items-center gap-2">
+              <img src="https://cdn.poehali.dev/projects/2b4f44ee-003c-4f33-8cd3-e727870eeed3/files/70fc69be-5219-4aa8-b488-3fef4a7dff1d.jpg" alt="Логотип" className="h-10 md:h-12 w-auto object-contain" />
+            </div>
             <button
-              className="md:hidden p-2 text-gray-600 hover:text-primary transition-colors"
+              className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
             </button>
             
             <div className="md:hidden flex items-center gap-2">
-              <a href="tel:+79147675112" className="p-2 text-gray-900 hover:text-primary transition-colors">
+              <a href="tel:+79147675112" className="p-2 text-white hover:text-white/80 transition-colors">
                 <Icon name="Phone" size={20} />
               </a>
-              <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="p-2 text-green-600 hover:text-green-700 transition-colors">
+              <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="p-2 text-white hover:text-white/80 transition-colors">
                 <Icon name="MessageCircle" size={20} />
               </a>
             </div>
@@ -48,8 +51,8 @@ const Index = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-base font-medium transition-colors hover:text-primary ${
-                    activeSection === item.id ? 'text-primary' : 'text-gray-600'
+                  className={`text-base font-medium transition-colors hover:text-white ${
+                    activeSection === item.id ? 'text-white font-semibold' : 'text-white/90'
                   }`}
                 >
                   {item.label}
@@ -58,19 +61,19 @@ const Index = () => {
             </div>
             <div className="hidden md:flex items-center gap-4">
               <div className="flex items-center gap-1">
-                <a href="tel:+79147675112" className="text-base font-medium text-gray-900 hover:text-primary transition-colors">
+                <a href="tel:+79147675112" className="text-base font-medium text-white hover:text-white/80 transition-colors">
                   +7 914 767-51-12
                 </a>
-                <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
                   <Icon name="MessageCircle" size={18} />
                 </a>
               </div>
-              <span className="text-gray-400">|</span>
+              <span className="text-white/40">|</span>
               <div className="flex items-center gap-1">
-                <a href="tel:+79147449568" className="text-base font-medium text-gray-900 hover:text-primary transition-colors">
+                <a href="tel:+79147449568" className="text-base font-medium text-white hover:text-white/80 transition-colors">
                   +7 914 744-95-68
                 </a>
-                <a href="https://wa.me/79147449568" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                <a href="https://wa.me/79147449568" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
                   <Icon name="MessageCircle" size={18} />
                 </a>
               </div>
@@ -78,7 +81,7 @@ const Index = () => {
           </div>
           
           {isMobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 space-y-3 border-t pt-4">
+            <div className="md:hidden mt-4 pb-4 space-y-3 border-t border-white/20 pt-4">
               {[
                 { id: 'home', label: 'Главная' },
                 { id: 'services', label: 'Услуги' },
@@ -89,8 +92,8 @@ const Index = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left px-4 py-2 text-base font-medium transition-colors hover:bg-gray-50 rounded ${
-                    activeSection === item.id ? 'text-primary bg-blue-50' : 'text-gray-600'
+                  className={`block w-full text-left px-4 py-2 text-base font-medium transition-colors hover:bg-white/10 rounded ${
+                    activeSection === item.id ? 'text-white bg-white/20 font-semibold' : 'text-white/90'
                   }`}
                 >
                   {item.label}
