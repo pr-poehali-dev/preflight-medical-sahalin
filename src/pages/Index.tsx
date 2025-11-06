@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <nav className="container mx-auto px-4 py-4 md:py-5">
-          <div className="flex items-center justify-between w-full">
+        <nav className="container mx-auto px-4 py-4 md:py-5 relative">
+          <div className="flex items-center justify-between md:justify-center w-full">
             <button
               className="md:hidden p-2 text-gray-600 hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -37,7 +37,7 @@ const Index = () => {
               </a>
             </div>
 
-            <div className="hidden md:flex flex-1 items-center justify-center gap-8">
+            <div className="hidden md:flex items-center justify-center gap-8">
               {[
                 { id: 'home', label: 'Главная' },
                 { id: 'services', label: 'Услуги' },
@@ -56,24 +56,25 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-1">
-                <a href="tel:+79147675112" className="text-base font-medium text-gray-900 hover:text-primary transition-colors">
-                  +7 914 767-51-12
-                </a>
-                <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
-                  <Icon name="MessageCircle" size={18} />
-                </a>
-              </div>
-              <span className="text-gray-400">|</span>
-              <div className="flex items-center gap-1">
-                <a href="tel:+79147449568" className="text-base font-medium text-gray-900 hover:text-primary transition-colors">
-                  +7 914 744-95-68
-                </a>
-                <a href="https://wa.me/79147449568" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
-                  <Icon name="MessageCircle" size={18} />
-                </a>
-              </div>
+          </div>
+          
+          <div className="hidden md:flex items-center gap-4 absolute right-4 top-1/2 -translate-y-1/2">
+            <div className="flex items-center gap-1">
+              <a href="tel:+79147675112" className="text-base font-medium text-gray-900 hover:text-primary transition-colors">
+                +7 914 767-51-12
+              </a>
+              <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                <Icon name="MessageCircle" size={18} />
+              </a>
+            </div>
+            <span className="text-gray-400">|</span>
+            <div className="flex items-center gap-1">
+              <a href="tel:+79147449568" className="text-base font-medium text-gray-900 hover:text-primary transition-colors">
+                +7 914 744-95-68
+              </a>
+              <a href="https://wa.me/79147449568" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                <Icon name="MessageCircle" size={18} />
+              </a>
             </div>
           </div>
           
