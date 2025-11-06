@@ -378,7 +378,7 @@ const Index = () => {
                   <CardDescription className="text-base text-gray-700">
                     Пн — Пт: 05:00–19:00
                     <br />
-                    Сб — Вс: 06:00–18:00 (Перерыв: 12:00–15:00)
+                    Сб — Вс: 06:00–18:00 (перерыв: 12:00–15:00)
                   </CardDescription>
                 </CardHeader>
               </Card>
