@@ -21,9 +21,12 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary to-secondary backdrop-blur-sm border-b border-blue-400/20">
         <nav className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between w-full">
-            <div className="flex items-center gap-2">
-              <img src="https://cdn.poehali.dev/files/229151c1-2ab7-4014-ad7d-200e3a3e7abf.png" alt="Логотип" className="h-12 md:h-14 w-auto object-contain" />
-            </div>
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
+              <img src="https://cdn.poehali.dev/files/229151c1-2ab7-4014-ad7d-200e3a3e7abf.png" alt="Логотип" className="h-10 md:h-11 w-auto object-contain" />
+            </button>
             <button
               className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
