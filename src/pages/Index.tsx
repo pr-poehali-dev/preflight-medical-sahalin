@@ -413,36 +413,20 @@ const Index = () => {
 
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <img src="https://cdn.poehali.dev/files/931fd315-6af0-427d-8bce-5c9dd31415f0.png" alt="Интермед-групп" className="h-10 w-auto" />
-                <span className="text-xl font-bold">Интермед-групп</span>
-              </div>
+              <h3 className="text-xl font-bold mb-4">Интермед-групп</h3>
               <p className="text-gray-400">
-                Профессиональные медицинские осмотры в Сахалинской области
+                Медицинские осмотры водителей. Быстро, качественно, с соблюдением всех стандартов.
               </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Быстрые ссылки</h3>
-              <div className="space-y-2">
-                {['Главная', 'Услуги', 'О компании', 'Лицензии', 'Контакты'].map((item) => (
-                  <button
-                    key={item}
-                    className="block text-gray-400 hover:text-primary transition-colors"
-                    onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Контакты</h3>
               <div className="space-y-2 text-gray-400">
                 <p>+7 914 767-51-12</p>
+                <p>+7 914 744-95-68</p>
                 <p>intermed.ltd@bk.ru</p>
-                <p>г. Южно-Сахалинск</p>
+                <p>Сахалинская область, г. Южно-Сахалинск, Ул. Чехова, 43, 2 этаж, кабинет 3</p>
               </div>
             </div>
           </div>
