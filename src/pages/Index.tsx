@@ -446,8 +446,8 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2024 Интермед-групп. Все права защищены.</p>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-left">
+            <p className="text-gray-400 text-sm">© 2025 Интермед-групп. Все права защищены.</p>
           </div>
         </div>
       </footer>
