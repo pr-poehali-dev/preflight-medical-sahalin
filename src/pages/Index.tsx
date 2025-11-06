@@ -411,32 +411,32 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-gray-900 text-white py-10">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-[2fr_1fr_1fr] gap-12 max-w-6xl">
+          <div className="grid md:grid-cols-[2fr_1fr_1fr] gap-8 max-w-6xl">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Интермед-групп</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-white">Интермед-групп</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
                 Медицинские осмотры водителей. Быстро, качественно, с соблюдением всех стандартов.
               </p>
             </div>
             <div className="md:text-right">
-              <h3 className="font-semibold text-lg mb-4 text-white">Контакты</h3>
-              <div className="space-y-3 text-gray-400">
+              <h3 className="font-semibold text-base mb-3 text-white">Контакты</h3>
+              <div className="space-y-2 text-gray-400 text-sm">
                 <p className="hover:text-primary transition-colors cursor-pointer">+7 914 767-51-12</p>
                 <p className="hover:text-primary transition-colors cursor-pointer">+7 914 744-95-68</p>
                 <p className="hover:text-primary transition-colors cursor-pointer">intermed.ltd@bk.ru</p>
               </div>
             </div>
             <div className="md:text-right">
-              <h3 className="font-semibold text-lg mb-4 text-white">Адрес</h3>
-              <div className="text-gray-400 leading-relaxed">
+              <h3 className="font-semibold text-base mb-3 text-white">Адрес</h3>
+              <div className="text-gray-400 text-sm leading-relaxed">
                 <p>Сахалинская область,<br />г. Южно-Сахалинск,<br />Ул. Чехова, 43,<br />2 этаж, кабинет 3</p>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-left max-w-6xl">
-            <p className="text-gray-500 text-sm">© 2025 Интермед-групп. Все права защищены.</p>
+          <div className="border-t border-gray-800 mt-8 pt-6 text-left max-w-6xl">
+            <p className="text-gray-500 text-xs">© 2025 Интермед-групп. Все права защищены.</p>
           </div>
         </div>
       </footer>
