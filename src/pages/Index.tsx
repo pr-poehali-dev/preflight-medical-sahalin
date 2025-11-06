@@ -67,10 +67,20 @@ const Index = () => {
                     <Button size="lg" className="text-lg px-8" asChild>
                       <a href="tel:+79147675112">Позвонить нам</a>
                     </Button>
-                    <div className="flex gap-3 text-sm text-gray-600 justify-center">
-                      <a href="tel:+79147675112" className="hover:text-primary transition-colors">+7 914 767-51-12</a>
+                    <div className="flex gap-3 text-sm text-gray-600 justify-center items-center">
+                      <div className="flex items-center gap-1">
+                        <a href="tel:+79147675112" className="hover:text-primary transition-colors">+7 914 767-51-12</a>
+                        <a href="https://wa.me/79147675112" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                          <Icon name="MessageCircle" size={18} />
+                        </a>
+                      </div>
                       <span>•</span>
-                      <a href="tel:+79147449568" className="hover:text-primary transition-colors">+7 914 744-95-68</a>
+                      <div className="flex items-center gap-1">
+                        <a href="tel:+79147449568" className="hover:text-primary transition-colors">+7 914 744-95-68</a>
+                        <a href="https://wa.me/79147449568" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 transition-colors">
+                          <Icon name="MessageCircle" size={18} />
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <Button size="lg" variant="outline" className="text-lg px-8" onClick={() => scrollToSection('services')}>
