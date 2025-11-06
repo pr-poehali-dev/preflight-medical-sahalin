@@ -413,7 +413,7 @@ const Index = () => {
 
       <footer className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 max-w-6xl">
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">Интермед-групп</h3>
               <p className="text-gray-400 leading-relaxed">
@@ -435,7 +435,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-left max-w-6xl mx-auto">
+          <div className="border-t border-gray-800 mt-12 pt-8 text-left max-w-6xl">
             <p className="text-gray-500 text-sm">© 2025 Интермед-групп. Все права защищены.</p>
           </div>
         </div>
