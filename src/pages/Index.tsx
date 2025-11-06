@@ -331,86 +331,58 @@ const Index = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Контакты</h2>
               <p className="text-xl text-gray-600">Свяжитесь с нами удобным способом</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-              <div className="space-y-6">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-3">
-                      <Icon name="MapPin" className="text-primary" size={24} />
-                      Адрес
-                    </CardTitle>
-                    <CardDescription className="text-base text-gray-700">
-                      Сахалинская область, г. Южно-Сахалинск,
-                      <br />
-                      Ул. Чехова, 43, 2 этаж, кабинет 3
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-3">
-                      <Icon name="Phone" className="text-primary" size={24} />
-                      Телефон
-                    </CardTitle>
-                    <CardDescription className="text-base text-gray-700">
-                      +7 914 767-51-12
-                      <br />
-                      +7 914 744-95-68
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-3">
-                      <Icon name="Mail" className="text-primary" size={24} />
-                      Email
-                    </CardTitle>
-                    <CardDescription className="text-base text-gray-700">
-                      intermed.ltd@bk.ru
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-3">
-                      <Icon name="Clock" className="text-primary" size={24} />
-                      Режим работы
-                    </CardTitle>
-                    <CardDescription className="text-base text-gray-700">
-                      Пн — Пт: 05:00–19:00
-                      <br />
-                      Сб — Вс: 06:00–18:00
-                      <br />
-                      Перерыв: 12:00–15:00
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-              </div>
-
-              <Card className="p-6">
-                <CardHeader className="px-0 pt-0">
-                  <CardTitle>Записаться на осмотр</CardTitle>
-                  <CardDescription>Заполните форму и мы свяжемся с вами</CardDescription>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <Icon name="MapPin" className="text-primary" size={24} />
+                    Адрес
+                  </CardTitle>
+                  <CardDescription className="text-base text-gray-700">
+                    Сахалинская область, г. Южно-Сахалинск,
+                    <br />
+                    Ул. Чехова, 43, 2 этаж, кабинет 3
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="px-0 pb-0">
-                  <form className="space-y-4">
-                    <div>
-                      <Input placeholder="Ваше имя" />
-                    </div>
-                    <div>
-                      <Input type="tel" placeholder="Телефон" />
-                    </div>
-                    <div>
-                      <Input type="email" placeholder="Email" />
-                    </div>
-                    <div>
-                      <Textarea placeholder="Сообщение" rows={4} />
-                    </div>
-                    <Button type="submit" className="w-full" size="lg">
-                      Отправить заявку
-                    </Button>
-                  </form>
-                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <Icon name="Phone" className="text-primary" size={24} />
+                    Телефон
+                  </CardTitle>
+                  <CardDescription className="text-base text-gray-700">
+                    +7 914 767-51-12
+                    <br />
+                    +7 914 744-95-68
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <Icon name="Mail" className="text-primary" size={24} />
+                    Email
+                  </CardTitle>
+                  <CardDescription className="text-base text-gray-700">
+                    intermed.ltd@bk.ru
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3">
+                    <Icon name="Clock" className="text-primary" size={24} />
+                    Режим работы
+                  </CardTitle>
+                  <CardDescription className="text-base text-gray-700">
+                    Пн — Пт: 05:00–19:00
+                    <br />
+                    Сб — Вс: 06:00–18:00
+                    <br />
+                    Перерыв: 12:00–15:00
+                  </CardDescription>
+                </CardHeader>
               </Card>
             </div>
             
