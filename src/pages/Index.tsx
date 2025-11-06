@@ -18,7 +18,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary/90 to-secondary/90 backdrop-blur-md border-b border-blue-400/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary/85 to-secondary/85 backdrop-blur-md border-b border-blue-400/20">
         <nav className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between w-full">
             <button 
