@@ -37,7 +37,7 @@ const Index = () => {
               </a>
             </div>
 
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex flex-1 items-center justify-center gap-8">
               {[
                 { id: 'home', label: 'Главная' },
                 { id: 'services', label: 'Услуги' },
