@@ -10,10 +10,20 @@ interface ContentItem {
   label: string;
 }
 
+interface ImageItem {
+  id: number;
+  key: string;
+  url: string;
+  filename: string;
+  label: string;
+}
+
 export default function Admin() {
   const [content, setContent] = useState<ContentItem[]>([]);
+  const [images, setImages] = useState<ImageItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -26,6 +36,12 @@ export default function Admin() {
     email: 'Email',
   };
 
+  const imageLabels: Record<string, string> = {
+    hero_image: 'Главное изображение',
+    about_image: 'Изображение "О нас"',
+    service_image: 'Изображение услуг',
+  };
+
   useEffect(() => {
     const token = localStorage.getItem('admin_token');
     if (!token) {
@@ -34,6 +50,7 @@ export default function Admin() {
     }
 
     fetchContent();
+    fetchImages();
   }, [navigate]);
 
   const fetchContent = async () => {
@@ -59,6 +76,27 @@ export default function Admin() {
       console.error('Error fetching content:', err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchImages = async () => {
+    try {
+      const response = await fetch('https://functions.poehali.dev/f65b1658-5938-425b-a90e-fc32d7126383', {
+        headers: {
+          'X-Auth-Token': localStorage.getItem('admin_token') || '',
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const formattedImages = data.map((item: any) => ({
+          ...item,
+          label: imageLabels[item.key] || item.key,
+        }));
+        setImages(formattedImages);
+      }
+    } catch (err) {
+      console.error('Error fetching images:', err);
     }
   };
 
@@ -102,6 +140,45 @@ export default function Admin() {
     );
   };
 
+  const handleImageUpload = async (key: string, file: File) => {
+    setUploading(true);
+    setMessage('');
+
+    try {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      
+      reader.onload = async () => {
+        const base64Data = reader.result as string;
+        
+        const response = await fetch('https://functions.poehali.dev/f65b1658-5938-425b-a90e-fc32d7126383', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Auth-Token': localStorage.getItem('admin_token') || '',
+          },
+          body: JSON.stringify({
+            key,
+            url: base64Data,
+            filename: file.name,
+          }),
+        });
+
+        if (response.ok) {
+          setMessage('Изображение загружено успешно!');
+          setTimeout(() => setMessage(''), 3000);
+          await fetchImages();
+        } else {
+          setMessage('Ошибка при загрузке изображения');
+        }
+        setUploading(false);
+      };
+    } catch (err) {
+      setMessage('Ошибка при загрузке изображения');
+      setUploading(false);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -138,29 +215,58 @@ export default function Admin() {
             <p className="text-gray-600">Измените информацию на сайте</p>
           </div>
 
-          <div className="space-y-6">
-            {content.map((item) => (
-              <div key={item.key}>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {item.label}
-                </label>
-                {item.key.includes('title') || item.key.includes('subtitle') ? (
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-lg font-semibold text-gray-900">Тексты</h3>
+              {content.map((item) => (
+                <div key={item.key}>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {item.label}
+                  </label>
                   <Input
                     type="text"
                     value={item.value}
                     onChange={(e) => updateValue(item.key, e.target.value)}
                     className="w-full"
                   />
-                ) : (
-                  <Input
-                    type="text"
-                    value={item.value}
-                    onChange={(e) => updateValue(item.key, e.target.value)}
-                    className="w-full"
-                  />
-                )}
+                </div>
+              ))}
+            </div>
+
+            <div className="border-t pt-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-6">Изображения</h3>
+              <div className="space-y-6">
+                {images.map((image) => (
+                  <div key={image.key} className="border rounded-lg p-4">
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                      {image.label}
+                    </label>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <img
+                          src={image.url}
+                          alt={image.label}
+                          className="w-32 h-32 object-cover rounded-lg border"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm text-gray-600 mb-3">{image.filename}</p>
+                        <Input
+                          type="file"
+                          accept="image/*"
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) handleImageUpload(image.key, file);
+                          }}
+                          disabled={uploading}
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
           {message && (
